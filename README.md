@@ -1,0 +1,1 @@
+Analyse frames using direct stiffness method with Pytorch tensors.
