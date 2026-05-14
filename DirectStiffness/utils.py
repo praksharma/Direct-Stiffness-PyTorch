@@ -4,9 +4,12 @@ from loguru import logger
 class Config():
     """
     A configuration class to manage different settings.
+    float_type: default data type.
+    torch_seed: seed, pretty sure this is redundant
+    device: device to run the tensors on
     """
     def __init__(self,
-                 torch_type=torch.float32, torch_seed=0, random_seed=0, numpy_seed=0, device = "cpu", device_override = False) -> None:
+                 torch_type=torch.float32, torch_seed=0, device = "cpu", device_override = False) -> None:
         logger.debug("Config init called")
         self.float_type = torch_type # will implement this is future
         self.torch_seed = torch_seed # not sure if I will need it.
